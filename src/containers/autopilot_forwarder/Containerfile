@@ -1,0 +1,5 @@
+FROM python:3.9
+WORKDIR /app
+COPY . .
+RUN pip install pynmea2
+CMD ["python", "src/nmea_forwarder.py"]

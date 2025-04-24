@@ -1,0 +1,11 @@
+engine_sim_plc_l_pod_modbus_nats_kv_server_extra_vars += \
+	pod_name \
+	nats_topic \
+	modbus_host \
+	nats_url
+
+engine_sim_plc_l_pod_modbus_nats_kv_server_extra_var_pod_name = engine-l
+engine_sim_plc_l_pod_modbus_nats_kv_server_extra_var_nats_topic = physics.THROTTLE.L
+engine_sim_plc_l_pod_modbus_nats_kv_server_extra_var_modbus_host = $(engine_sim_plc_l_pod_modbus_nats_kv_server_eth0_ip)
+
+engine_sim_plc_l_pod_modbus_nats_kv_server_extra_var_nats_url = nats://$(nats_relay_1_pod_nats_eth0_ip):4222

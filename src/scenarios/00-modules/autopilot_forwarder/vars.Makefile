@@ -1,0 +1,11 @@
+autopilot_forwarder_pod_autopilot_forwarder_extra_vars += \
+	nmea_host \
+	nmea_port \
+	autopilot_nmea_tcp_host \
+	autopilot_nmea_tcp_port
+
+autopilot_forwarder_pod_autopilot_forwarder_extra_var_nmea_host = $(nmea_multicast_ip)
+autopilot_forwarder_pod_autopilot_forwarder_extra_var_nmea_port = $(nmea_multicast_port)
+autopilot_forwarder_pod_autopilot_forwarder_extra_var_autopilot_nmea_tcp_host = $(autopilot_pod_autopilot_eth0_ip)
+autopilot_forwarder_pod_autopilot_forwarder_extra_var_autopilot_nmea_tcp_port = 5000
+#$(autopilot_nmea_tcp_port)
