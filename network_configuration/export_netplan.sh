@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Default configuration
-EVE_HOST="192.168.166.166"
+EVE_HOST="10.67.43.244"
 EVE_USER="root"
 REMOTE_DIR="/root/export"
 
