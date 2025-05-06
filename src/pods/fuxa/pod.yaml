@@ -19,9 +19,6 @@ spec:
   containers:
     - name: fuxa
       image: ${fuxa_image}
-      ports:
-      - containerPort: 1881
-        hostPort: 80
       volumeMounts:
       - { name: appdata, mountPath: /usr/src/app/FUXA/server/_appdata }
       - { name: database, mountPath: /usr/src/app/FUXA/server/_db }
