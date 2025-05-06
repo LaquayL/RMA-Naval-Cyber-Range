@@ -1,0 +1,14 @@
+# Local domain and DNS
+domain=mcm
+expand-hosts
+
+# Add custom DNS records
+address=/radar_asterix.mcm/192.168.3.103
+address=/radar_navico.mcm/192.168.3.104
+address=/sgs.mcm/192.168.1.109
+address=/sgs_master.mcm/192.168.1.110
+address=/instruments.mcm/192.168.1.106
+address=/wecdis.mcm/192.168.5.102
+
+# Forward unresolved queries to external DNS
+server=192.168.4.1
