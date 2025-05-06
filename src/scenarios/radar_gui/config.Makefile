@@ -3,4 +3,3 @@
 MODULES += nets_base_radar_gui # Basic networking
 MODULES += ppi_asterix # ASTERIX radar
 MODULES += ppi_navico   # NAVICO radar
-MODULES += gui_home # GUI for MaCySTe (leave it near the end if you are leveraging the dynamic GUI functionality)
