@@ -10,4 +10,4 @@ network:
           via: 192.168.3.1
       nameservers:
         addresses:
-          - 192.168.4.1
+          - 192.168.3.2
