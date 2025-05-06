@@ -15,9 +15,6 @@ spec:
   containers:
     - name: openplc
       image: ${openplc_image}
-      ports:
-      - containerPort: 8080
-        hostPort: 3001
       volumeMounts:
       - { name: config, mountPath: /data/mbconfig.cfg.tmpl, readOnly: true }
       - { name: program, mountPath: /data/main.st, readOnly: true }
