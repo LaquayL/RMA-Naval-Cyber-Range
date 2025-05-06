@@ -8,7 +8,6 @@ spec:
       image: ${gui_asterix_image}
       ports:
       - containerPort: 3000
-        hostPort: 80
       env:
       - { name: ASTERIX_WS_URL, value: "${asterix_ws_url}" }
       - { name: NATS_WS_URL, value: "${nats_ws_url}" }
