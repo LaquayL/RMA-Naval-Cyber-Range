@@ -15,6 +15,9 @@ spec:
   containers:
     - name: opencpn
       image: ${opencpn_image}
+      ports:
+      - containerPort: 8080
+        hostPort: 8080
       securityContext:
         capabilities:
           add:

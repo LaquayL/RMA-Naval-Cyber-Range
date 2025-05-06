@@ -6,5 +6,8 @@ spec:
   containers:
     - name: gui-instruments
       image: ${gui_instruments_image}
+      ports:
+      - containerPort: 3000
+        hostPort: 8080
       env:
       - { name: NATS_URL, value: ${nats_relay_ws_url} }
