@@ -8,3 +8,4 @@ spec:
       image: ${websocket_to_websocket_image}
       ports:
       - containerPort: 3000
+        protocol: TCP
