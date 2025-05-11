@@ -8,5 +8,5 @@ spec:
       image: ${websocket_to_websocket_image}
       ports:
       - containerPort: 3000
-        hostPort: ${external_port}
+        #hostPort: ${external_port}
         protocol: TCP
