@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: macyste-gui-attack
+  name: macyste-gui-attack-${target}
 spec:
   containers:
     - name: gui-attack

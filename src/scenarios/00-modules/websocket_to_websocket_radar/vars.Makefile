@@ -1,1 +1,4 @@
-websocket_to_websocket_radar_pod_websocket_to_websocket_extra_vars +=
+websocket_to_websocket_radar_pod_websocket_to_websocket_extra_vars += \
+    target
+
+websocket_to_websocket_radar_pod_websocket_to_websocket_extra_var_target = radar
