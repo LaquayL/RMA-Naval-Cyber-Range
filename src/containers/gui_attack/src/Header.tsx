@@ -27,7 +27,7 @@ export default function Header() {
     return (
         <Navbar bg="danger" variant="dark" sticky="top" className='flex-grow-1'>
             <Container>
-                <Navbar.Brand>MaCySTe</Navbar.Brand>
+                <Navbar.Brand>Naval Cyber Range</Navbar.Brand>
                 <Navbar.Collapse>
                     <Nav className="me-auto">
                         <Nav.Link onClick={() => setShipListShown(true)}>Ships list</Nav.Link>
