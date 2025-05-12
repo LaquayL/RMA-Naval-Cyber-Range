@@ -234,7 +234,7 @@ async fn main() -> anyhow::Result<()> {
         .layer(tower_http::trace::TraceLayer::new_for_http())
         .layer(tower_http::compression::CompressionLayer::new());
     // Parse bind port
-    let server_port = std::env::var("BIND_PORT").unwrap_or("3000".to_string());
+    let server_port = std::env::var("EXTERNAL_PORT").unwrap_or("3000".to_string());
     let server_port: u16 = server_port.parse().expect("Could not parse BIND_PORT");
     let server_addr = SocketAddr::from((std::net::Ipv4Addr::UNSPECIFIED, server_port));
     tracing::info!(address = ?server_addr, "Starting");

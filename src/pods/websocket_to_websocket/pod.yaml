@@ -7,4 +7,8 @@ spec:
     - name: proxy
       image: ${websocket_to_websocket_image}
       ports:
-      - containerPort: 3000
+      - containerPort: ${external_port}
+        hostPort: ${external_port}
+        Protocol: TCP
+      env:
+      - { name: EXTERNAL_PORT, value: "${external_port}" }

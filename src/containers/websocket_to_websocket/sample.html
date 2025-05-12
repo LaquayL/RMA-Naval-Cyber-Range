@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <title>ws2ws sample</title>
   <script>
-let ws_port = 3000;
+const ws_port = window.location.port
 document.addEventListener('DOMContentLoaded', _ => {
   const clients = document.getElementById('clients')
   const form = document.getElementById('client-form')

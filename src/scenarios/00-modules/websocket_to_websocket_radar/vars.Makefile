@@ -3,4 +3,4 @@ websocket_to_websocket_radar_pod_websocket_to_websocket_extra_vars += \
     external_port
 
 websocket_to_websocket_radar_pod_websocket_to_websocket_extra_var_target = radar
-websocket_to_websocket_radar_pod_websocket_to_websocket_extra_var_external_port = 3000
+websocket_to_websocket_radar_pod_websocket_to_websocket_extra_var_external_port = 3100
