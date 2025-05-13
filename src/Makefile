@@ -255,6 +255,8 @@ up-net-%:
 		--driver $($(NAME)_NET_DRIVER) \
 		$(if $(filter macvlan,$($(NAME)_NET_DRIVER)), \
 			$(if $($(NAME)_NET_EXTERNAL), --opt parent=$($(NAME)_NET_INTERFACE), --opt parent=dummy0)) \
+		$(if $(filter ipvlan,$($(NAME)_NET_DRIVER)), \
+			$(if $($(NAME)_NET_EXTERNAL), --opt parent=$($(NAME)_NET_INTERFACE) --opt mode=l3 --gateway $($(NAME)_NET_GATEWAY), --opt parent=dummy0)) \
 		$(if $($(NAME)_NET_INTERNAL),--internal) \
 		--subnet $($(NAME)_NET_CIDR) \
 		$($(NAME)_NET_NAME)
