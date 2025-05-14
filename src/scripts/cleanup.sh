@@ -28,7 +28,7 @@ while read -r HOST USER PASS; do
         -o StrictHostKeyChecking=no \
         -o UserKnownHostsFile=/dev/null \
         "${USER}@${HOST}" \
-        'pkill -f I_c0ntro1_y0ur_5hip'
+        'pkill -f I_c0ntro1_y0ur_5hip || true'
         
     then
         echo "  ✔ Success on $HOST"
@@ -41,7 +41,7 @@ while read -r HOST USER PASS; do
         -o StrictHostKeyChecking=no \
         -o UserKnownHostsFile=/dev/null \
         "${USER}@${HOST}" \
-        'rm -rf "$HOME/.tmp"'
+        'rm -rf "$HOME/.tmp" || true'
         
     then
         echo "  ✔ Success on $HOST"
