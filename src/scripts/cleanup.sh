@@ -23,13 +23,15 @@ while read -r HOST USER PASS; do
   [ -z "$HOST" ] && continue        # skip blank lines
   echo "→ Cleaning up on $HOST as $USER …"
 
-  sshpass -p "$PASS" ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${USER}@${HOST}" bash -s <<-'EOF'
+  if sshpass -p "$PASS" ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${USER}@${HOST}" bash -s <<-'EOF'
 	pkill -f I_c0ntro1_y0ur_5hip || true
 	rm -rf ~/.tmp       || true
 EOF
 
-
-    && echo "  ✔ Success on $HOST" \
-    || echo "  ✖ Failed on $HOST"
-
+    then
+        echo "  ✔ Success on $HOST"
+    else
+        echo "  ✖ Failed on $HOST"
+    fi
+    
 done < "$HOSTS_CFG"
