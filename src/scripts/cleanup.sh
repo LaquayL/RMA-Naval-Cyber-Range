@@ -27,11 +27,22 @@ while read -r HOST USER PASS; do
         -o ConnectTimeout=5 \
         -o StrictHostKeyChecking=no \
         -o UserKnownHostsFile=/dev/null \
-        "${USER}@${HOST}" bash -s <<'EOF'
-pkill -f I_c0ntro1_y0ur_5hip || true
-rm -rf "$HOME/.tmp"       || true
-EOF
+        "${USER}@${HOST}" \
+        'pkill -f I_c0ntro1_y0ur_5hip'
+        
+    then
+        echo "  ✔ Success on $HOST"
+    else
+        echo "  ✖ Failed on $HOST"
+    fi
 
+    if sshpass -p "$PASS" ssh -n \
+        -o ConnectTimeout=5 \
+        -o StrictHostKeyChecking=no \
+        -o UserKnownHostsFile=/dev/null \
+        "${USER}@${HOST}" \
+        'rm -rf "$HOME/.tmp"'
+        
     then
         echo "  ✔ Success on $HOST"
     else
