@@ -24,8 +24,8 @@ if [ ! -r "$HOSTS_CFG" ]; then
 fi
 
 while read -r HOST USER PASS; do
-  [ -z "$HOST" ] && continue        # skip blank lines
-  echo "→ Cleaning up on $HOST as $USER …"
+    [ -z "$HOST" ] && continue        # skip blank lines
+    echo "→ Cleaning up on $HOST as $USER …"
 
     sshpass -p "$PASS" ssh -o ConnectTimeout=5 \
         -o StrictHostKeyChecking=no \
@@ -39,7 +39,7 @@ while read -r HOST USER PASS; do
         "${USER}@${HOST}" \
         bash -lc "$CLEAN_CMDS_RM" \
 
-    && echo "  ✔ Success on $HOST" \
-    || echo "  ✖ Failed on $HOST"
+    echo "  ✔ Success on $HOST"
+    echo "  ✖ Failed on $HOST"
 
 done < "$HOSTS_CFG"
