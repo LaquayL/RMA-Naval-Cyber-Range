@@ -6,10 +6,6 @@ set -euo pipefail
 #   hostname_or_ip username password
 HOSTS_CFG="${1:-hosts.cfg}"
 
-# Optional: override default commands
-CLEAN_CMDS_KILL='pkill I_c0ntro1_y0ur_5hip'
-CLEAN_CMDS_RM='rm -rf "$HOME/.tmp"'
-
 # -------------------------
 
 if ! command -v sshpass >/dev/null 2>&1; then
@@ -31,13 +27,7 @@ while read -r HOST USER PASS; do
         -o StrictHostKeyChecking=no \
         -o UserKnownHostsFile=/dev/null \
         "${USER}@${HOST}" \
-        bash -lc "$CLEAN_CMDS_KILL" \
-
-    sshpass -p "$PASS" ssh -o ConnectTimeout=5 \
-        -o StrictHostKeyChecking=no \
-        -o UserKnownHostsFile=/dev/null \
-        "${USER}@${HOST}" \
-        bash -lc "$CLEAN_CMDS_RM" \
+        'pkill -f I_c0ntro1_y0ur_5hip || true; rm -rf "$HOME/.tmp" || true'
 
     echo "  ✔ Success on $HOST"
     echo "  ✖ Failed on $HOST"
