@@ -6,9 +6,6 @@ set -euo pipefail
 #   hostname_or_ip username password
 HOSTS_CFG="${1:-hosts.cfg}"
 
-# Optional: override default commands
-CLEAN_CMDS='pkill -f I_c0ntro1_y0ur_5hip || true; rm -rf "$HOME/.tmp" || true'
-
 # -------------------------
 
 if ! command -v sshpass >/dev/null 2>&1; then
@@ -26,11 +23,19 @@ while read -r HOST USER PASS; do
   [ -z "$HOST" ] && continue        # skip blank lines
   echo "→ Cleaning up on $HOST as $USER …"
 
-  sshpass -p "$PASS" ssh -o ConnectTimeout=5 \
+  if sshpass -p "$PASS" ssh -n \
+        -o ConnectTimeout=5 \
         -o StrictHostKeyChecking=no \
         -o UserKnownHostsFile=/dev/null \
-        "${USER}@${HOST}" bash -lc "$CLEAN_CMDS" \
-    && echo "  ✔ Success on $HOST" \
-    || echo "  ✖ Failed on $HOST"
+        "${USER}@${HOST}" bash -s <<'EOF'
+pkill -f I_c0ntro1_y0ur_5hip || true
+rm -rf "$HOME/.tmp"   || true
+EOF
+
+    then
+        echo "  ✔ Success on $HOST"
+    else
+        echo "  ✖ Failed on $HOST"
+    fi
 
 done < "$HOSTS_CFG"
