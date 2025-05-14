@@ -19,13 +19,19 @@ if [ ! -r "$HOSTS_CFG" ]; then
   exit 1
 fi
 
+line_no=0
 while read -r HOST USER PASS; do
-  [ -z "$HOST" ] && continue        # skip blank lines
-  echo "→ Cleaning up on $HOST as $USER …"
+    line_no=$((line_no+1))
+    [ -z "$HOST" ] && continue        # skip blank lines
+    echo "→ Cleaning up on $HOST as $USER …"
 
-  if sshpass -p "$PASS" ssh -o ConnectTimeout=5 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${USER}@${HOST}" bash -s <<-'EOF'
-	pkill -f I_c0ntro1_y0ur_5hip || true
-	rm -rf ~/.tmp       || true
+    if sshpass -p "$PASS" ssh -n \
+        -o ConnectTimeout=5 \
+        -o StrictHostKeyChecking=no \
+        -o UserKnownHostsFile=/dev/null \
+        "${USER}@${HOST}" bash -s <<'EOF' < /dev/null
+pkill -f I_c0ntro1_y0ur_5hip || true
+rm -rf "$HOME/.tmp"   || true
 EOF
 
     then
@@ -33,5 +39,5 @@ EOF
     else
         echo "  ✖ Failed on $HOST"
     fi
-    
+
 done < "$HOSTS_CFG"
