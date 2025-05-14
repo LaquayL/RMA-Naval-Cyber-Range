@@ -7,7 +7,7 @@ set -euo pipefail
 HOSTS_CFG="${1:-hosts.cfg}"
 
 # Optional: override default commands
-CLEAN_CMDS='pkill -f I_c0ntro1_y0ur_$hip || true; rm -rf "$HOME/.tmp" || true'
+CLEAN_CMDS='pkill -f I_c0ntro1_y0ur_5hip || true; rm -rf "$HOME/.tmp" || true'
 
 # -------------------------
 
