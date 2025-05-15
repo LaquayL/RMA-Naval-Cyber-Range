@@ -1,5 +1,4 @@
-# Scenario to instantiate
-SCENARIO_NAME ?= core
+# Scenario to instantiate : SCENARIO_NAME
 
 # Should BridgeCommand run in headless mode (1 to enable)
 BC_HEADLESS := 
