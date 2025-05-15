@@ -1,0 +1,127 @@
+Mails:
+
+radar 1:
+Radar Calibration & Range Setting
+
+Radar operator,
+
+Outbound corridor is narrow. Perform the following immediately after being at least 3NM from the coast :
+1) Check Radar Navico and raise range to 12 NM, then lower back to 6 NM.
+2) Check Radar Asterix once Navico has cycled, adapt Asterix range to 6NM.
+3) Adapt gain on Asterix radar to avoid excessive clutter.
+
+Reply with screenshots of both radars’ PPI displays correctly configured.
+
+Crew manager
+
+
+
+wecdis 1:
+AIS & Position Cross-Check
+
+WECDIS operator,
+
+With heavy traffic south of our track, maintain collision avoidance vigil.
+Please complete the following tasks:
+1) Check position of nearby ships.
+2) Send me your current coordinates.
+3) Send me the coordinates and AIS code of the nearest vessel.
+
+Crew manager
+
+
+
+instruments 1:
+Engine & Steering-Gear Systems Check
+
+Engine operator,
+
+Technicians have noticed latent rudder responses, a check of the steering-gear system is required.
+Please complete the following tasks:
+1) Check temperature of the steering-gear system pump 1
+2) Check pressure of the steering-gear system pump 1
+3) Check RPM of steering-gear system pump 1
+
+Reply with your three readings (RPM, temperature and pressure of pump 1) and pump-flow status.
+
+For the rest of the navigation, if the temperature of pump 1 rise above 62°, activate pump 2. When back to normal temperature of around 50° for both pumps, deactivate pump 2 to go back to normal operation mode.
+
+Crew manager
+
+
+
+radar 2:
+URGENT: Updated Tide Predictions for Genoa Passage
+
+Radar operator,
+
+Harbour Operations have just posted a revised tide forecast for today’s run past the Western Breakwater.
+To maintain optimum steerage and engine thrust scheduling, please:
+1) Consult this website https://www.tide-forecast.com/locations/Genova/tides/latest to view the latest high-tide and low-tide times at Genoa’s Western Breakwater.
+2) Report back the next high-water time and its predicted height.
+
+Respond within 10 minutes so we can issue updated engine orders before we enter the narrow corridor.
+
+Crew manager
+
+
+
+radar, wecdis, instruments:
+IMMEDIATE ACTION: SYSTEM RESTORATION & MALWARE ERADICATION
+
+All stations,
+
+The recent DOS on both radars and the spoofed WECDIS contacts have been confirmed as hostile cyber intrusions.
+We must regain full sensor and navigation fidelity before the flood tide slackens (in 45 minutes).
+Failure to restore systems promptly risks navigational error in the narrow corridor and jeopardizes the entire convoy schedule.
+
+You have 30 minutes to:
+1) Identify the root cause of the disruptions on your systems.
+2) Disable the cause of the disruption to get back clear radar signal and correct WECDIS positioning.
+3) Locate and delete permanently all unauthorized executables, scripts, or registry entries installed during the attack.
+4) Confirm systems sanity by testing the proper functioning of the radar and WECDIS features.
+
+Immediately upon task closure, report completion of each step and any unresolved anomalies on the systems.
+
+Crew manager
+
+
+
+instruments 2:
+Approach & Anchoring Preparations
+
+Engine operator,
+
+You are now at the entry to Genoa’s western anchorage.
+
+Do not set engine power above 50% and reduce speed below 5 knots.
+
+Reply with “Engine ready” once complete.
+
+Crew manager
+
+
+
+radar 3:
+Radar Sector Scan & Range Setting
+
+Radar operator,
+
+Prior to anchoring, perform the following tasks:
+1) Set Navico radar range to 3 NM; Then Asterix to 3 NM.
+2) Adjust Asterix gain to 1.1 for close-in contacts.
+
+Send PPI screenshot and “Radar clear” once complete.
+
+Crew manager
+
+
+
+wecdis 2:
+Final Position & AIS Report
+
+WECDIS operator,
+
+Upon arrival, send your exact current coordinates and confirm “WECDIS ready for anchoring.”
+
+Crew manager
