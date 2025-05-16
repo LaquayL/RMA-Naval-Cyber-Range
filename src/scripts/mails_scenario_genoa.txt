@@ -88,21 +88,6 @@ Crew manager
 
 
 
-instruments 2:
-Approach & Anchoring Preparations
-
-Engine operator,
-
-You are now at the entry to Genoa’s western anchorage.
-
-Do not set engine power above 50% and reduce speed below 5 knots.
-
-Reply with “Engine ready” once complete.
-
-Crew manager
-
-
-
 radar 3:
 Radar Sector Scan & Range Setting
 
@@ -113,6 +98,21 @@ Prior to anchoring, perform the following tasks:
 2) Adjust Asterix gain to 1.1 for close-in contacts.
 
 Send PPI screenshot and “Radar clear” once complete.
+
+Crew manager
+
+
+
+instruments 2:
+Approach & Anchoring Preparations
+
+Engine operator,
+
+You are now at the entry to Genoa’s western anchorage.
+
+Do not set engine power above 50% and reduce speed below 5 knots.
+
+Reply with “Engine ready” for acknoledgement.
 
 Crew manager
 
