@@ -80,8 +80,9 @@ You have 30 minutes to:
 2) Disable the cause of the disruption to get back clear radar signal and correct WECDIS positioning.
 3) Locate and delete permanently all unauthorized executables, scripts, or registry entries installed during the attack.
 4) Confirm systems sanity by testing the proper functioning of the radar and WECDIS features.
+5) Identify the different steps of the attack and the entry point for the malware installation on the different machines.
 
-Immediately upon task closure, report completion of each step and any unresolved anomalies on the systems.
+Immediately upon task closure, report completion of each step and any unresolved anomalies on the systems. Give also your conclusions conclusions on the course of the attack
 
 Crew manager
 
